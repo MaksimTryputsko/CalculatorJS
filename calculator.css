@@ -14,9 +14,16 @@ body{
     padding: 10px;
 
     display: grid;
+    grid-auto-rows: 50px;
+    gap: 10px;
+}
+.wrapper {
+    display: grid;
     grid-template-columns: repeat(7,1fr);
     grid-auto-rows: 50px;
     gap: 10px;
+    width: 970px;
+
 }
 .calc__result{
     grid-column:1 / -1;
@@ -24,7 +31,7 @@ body{
     font-size: 20px;
     padding: 13px;
     border-radius: 5px;
-    border:2px solid grey ;
+    border: 2px solid grey ;
 }
 .calc__btn{
     border: none;
