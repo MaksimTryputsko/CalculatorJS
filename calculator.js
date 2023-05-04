@@ -1,4 +1,7 @@
 "use strict"; 
+
+//////////////// ART №1 with evel()//////////////////
+
 // const calc = document.querySelector('.calc');
 // const result = document.querySelector('#result')
 
@@ -26,8 +29,8 @@ let b = '';
 let sign = '';
 let finish = false;
 
-const digit = ['0','1','2','3','4','5','6','7','8','9','.'];
-const action = ['-', '+', 'X','/'];
+const digit = ['0','1','2','3','4','5','6','7','8','9','.',')','(',];
+const action = ['-', '+', 'X','/','%','x!','In','log','√','xʸ','sin','cos','tan','EXP','π','e'];
 
 const out = document.querySelector('.calc__result');
 
@@ -52,7 +55,7 @@ document.querySelector('.wrapper').onclick = (event) => {
     if (digit.includes(key)){
         if(b === '' && sign === ''){
         a += key;
-        out.textContent = a;
+        out.textContent = a ;
 
         } else if (a!=='' && b!=='' && finish){
             b = key;
@@ -93,7 +96,47 @@ document.querySelector('.wrapper').onclick = (event) => {
                 //     return;
                 // }
                 a = a / b;
-            break;   
+            break;
+            case "%":
+                a = a * (b / 100);
+            break;
+            case "x!":
+                a = factorial(a)
+            break;
+            case "In":
+                a = Math.log(a);  ///////Проработать
+            break;
+            case "log":
+            a = Math.log10(a);
+            break;
+            case "√":
+             a = Math. sqrt(a);
+            break;
+            case "xʸ":
+            a = Math.pow(a, b)
+            break;
+            case "sin":
+               a = Math.sin(a)
+            break;
+            case "cos":
+            a = Math.cos(a)
+            break;
+            case "tan":
+                a = Math.tan(a)
+            break;
+            case "tan":
+                a = Math.tan(a)
+            break;
+            case "EXP":
+                a = a * Math.pow(10, b)
+            break;
+            case "π":
+               a = Math.PI
+            break;
+            case "e":
+               a =  Math.exp(1);
+            break;
+
         }
         finish = true;
         out.textContent = a;
@@ -102,4 +145,7 @@ document.querySelector('.wrapper').onclick = (event) => {
         
 }
 
+function factorial(a){
+    return (a != 1)? a * factorial(a-1) :1;
+}
        
