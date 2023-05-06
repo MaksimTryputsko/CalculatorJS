@@ -17,6 +17,12 @@ body{
     grid-auto-rows: 50px;
     gap: 10px;
 }
+.calc__result__input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-weight: bold;
+}
 .wrapper {
     display: grid;
     grid-template-columns: repeat(7,1fr);
@@ -33,7 +39,7 @@ body{
     border-radius: 5px;
     border: 2px solid grey ;
 }
-.calc__btn{
+.calc__btn {
     border: none;
     border-radius: 5px;
     background-color: #dadce0;
@@ -41,6 +47,26 @@ body{
     font-size: 15px;
     box-shadow: 2px 3px 2px rgb(0,0,0, 0.5);
 }
+.calc__btn1{
+    border: none;
+    border-radius: 5px;
+    background-color: #dadce0;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 2px 3px 2px rgb(0,0,0, 0.5);
+}
+.calc__btn1:hover{
+    opacity: 0.9;
+}
+.calc__btn1:active{
+    box-shadow: 1px 1px 2px rgb(0,0,0, 0.5);
+}
+.result_history {
+    border: 3px solid red;
+    width: 200px;
+}
+
+
 .calc__btn:hover{
     opacity: 0.9;
 }
