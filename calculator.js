@@ -3,7 +3,6 @@
 const display = document.querySelector('.calc__result__input');
 const btnsCalculate = document.querySelectorAll('.calc__btn1');
 const btns = document.querySelectorAll('.calc__btn');
-
 const operations = ['+', '-' ,'*' ,'/',"%",'E',"^"]
 const ingenerOperations = ['!','In',"log","√","Deg","sin","cos","tan","EXP","RAD","Inv","xʸ","e","Ans"]
 
@@ -128,8 +127,39 @@ btnsCalculate.forEach((item) => {
                         display.value += itemTextCalculate;
                 }
                 if(itemTextCalculate === "="){
-                        mathOperationsWithOneNumbers(display.value)
+                        
                 }    
         })
 })
+// после вырожения отключить кнопки кроме ровно 
 
+
+
+
+
+
+
+
+/*
+const operators = {
+        '+': (x, y) => x + y,
+        '-': (x, y) => x - y,
+        '*': (x, y) => x * y,
+        '/': (x, y) => x / y
+    };
+    
+    let evaluate = (expr) => {
+        let stack = [];
+        
+        expr.split(' ').forEach((token) => {
+            if (token in operators) {
+                let [y, x] = [stack.pop(), stack.pop()];
+                stack.push(operators[token](x, y));
+            } else {
+                stack.push(parseFloat(token));
+            }
+        });
+    
+        return stack.pop();
+    };
+*/
